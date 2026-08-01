@@ -1,0 +1,31 @@
+.quoteCard {
+  position: relative;
+  z-index: 30;
+  width: calc(100% - 1rem);
+  max-width: 24rem;
+  margin: -1rem auto 0;
+}
+
+@media (min-width: 64rem) {
+  .quoteCard {
+    position: absolute;
+    top: 66%;
+    right: -1rem;
+    width: 21rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 80rem) {
+  .quoteCard {
+    top: 70%;
+    right: -2.5rem;
+  }
+}
+
+@media (min-width: 96rem) {
+  .quoteCard {
+    top: 72%;
+    right: -8rem;
+  }
+}

@@ -1,26 +1,93 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "../styles/tokens.css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-brand-primary);
+  --color-primary-strong: var(--color-brand-primary-strong);
+  --color-primary-soft: var(--color-brand-primary-soft);
+  --color-secondary: var(--color-brand-secondary);
+  --color-secondary-strong: var(--color-brand-secondary-strong);
+  --color-secondary-soft: var(--color-brand-secondary-soft);
+  --color-whatsapp: var(--color-brand-whatsapp);
+  --color-background: var(--color-page-background);
+  --color-background-muted: var(--color-page-background-muted);
+  --color-surface: var(--color-page-surface);
+  --color-text: var(--color-text-primary);
+  --color-text-muted: var(--color-text-secondary);
+  --color-text-inverse: var(--color-text-on-dark);
+  --color-border: var(--color-border-subtle);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+
+  --text-display: var(--type-display);
+  --text-display--line-height: 1.03;
+  --text-display--letter-spacing: -0.045em;
+  --text-title: var(--type-title);
+  --text-title--line-height: 1.1;
+  --text-title--letter-spacing: -0.035em;
+  --text-heading: var(--type-heading);
+  --text-heading--line-height: 1.2;
+  --text-lead: var(--type-lead);
+  --text-lead--line-height: 1.55;
+
+  --radius-control: var(--radius-md);
+  --radius-card: var(--radius-lg);
+  --radius-panel: var(--radius-xl);
+  --radius-pill: var(--radius-full);
+  --shadow-subtle: var(--shadow-xs);
+  --shadow-card: var(--shadow-sm);
+  --shadow-elevated: var(--shadow-lg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--color-page-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--color-brand-secondary-soft);
+  color: var(--color-brand-primary-strong);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
