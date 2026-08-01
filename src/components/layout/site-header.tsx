@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useRef } from "react";
 
 import { Brand } from "@/components/brand/brand";
 import { CalendarIcon, MenuIcon } from "@/components/icons/system-icons";
@@ -10,6 +13,12 @@ const navLinkClasses =
   "rounded-sm py-2 text-sm font-bold text-text-muted transition-colors hover:text-primary";
 
 export function SiteHeader() {
+  const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+
+  const closeMobileMenu = () => {
+    mobileMenuRef.current?.removeAttribute("open");
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-surface/95 backdrop-blur-xl">
       <Container className="flex min-h-[var(--header-height)] items-center justify-between gap-6">
@@ -36,7 +45,7 @@ export function SiteHeader() {
           </ButtonLink>
         </div>
 
-        <details className="group relative lg:hidden">
+        <details ref={mobileMenuRef} className="group relative lg:hidden">
           <summary className="grid h-11 w-11 cursor-pointer list-none place-items-center rounded-control border border-border bg-surface text-primary shadow-subtle [&::-webkit-details-marker]:hidden">
             <span className="sr-only">Abrir menú de navegación</span>
             <MenuIcon className="h-6 w-6" />
@@ -49,6 +58,7 @@ export function SiteHeader() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
+                      onClick={closeMobileMenu}
                       className="block rounded-control px-4 py-3 font-bold text-text-muted hover:bg-primary-soft hover:text-primary"
                     >
                       {item.label}
