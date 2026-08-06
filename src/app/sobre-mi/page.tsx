@@ -27,7 +27,8 @@ export default function AboutPage() {
         eyebrow="Sobre mí"
         title="Una práctica guiada por el compromiso y la vocación"
         description="Acompaño procesos de adolescentes, adultos y parejas desde una mirada cercana, profesional y adaptada a cada persona."
-        photoLabel="+ Foto aquí"
+        photoSrc="/images/foto-nosotros.jpeg"
+        photoAlt="Fred Flores en un retrato personal"
         patternOrientation="horizontal"
         patternPosition="left"
       />

@@ -31,7 +31,8 @@ export default function ServicesPage() {
         eyebrow="Servicios"
         title="Acompañamiento para diferentes etapas y necesidades"
         description="Un espacio profesional para adolescentes, adultos y parejas, adaptado a los objetivos particulares de cada proceso."
-        photoLabel="+ Foto aquí"
+        photoSrc="/images/foto-servicios.jpeg"
+        photoAlt="Fred Flores preparado para una sesión de acompañamiento"
         patternOrientation="horizontal"
         patternPosition="bottom-right"
       />

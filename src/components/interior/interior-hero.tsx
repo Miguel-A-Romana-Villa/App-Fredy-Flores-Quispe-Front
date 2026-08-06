@@ -13,6 +13,8 @@ type InteriorHeroProps = {
   description: string;
   photoSide?: "left" | "right";
   photoLabel?: string;
+  photoSrc?: string;
+  photoAlt?: string;
   patternOrientation?: "vertical" | "horizontal";
   patternPosition?: PatternPosition;
   visual?: ReactNode;
@@ -33,6 +35,8 @@ export function InteriorHero({
   description,
   photoSide = "right",
   photoLabel,
+  photoSrc,
+  photoAlt,
   patternOrientation = "vertical",
   patternPosition = "right",
   visual,
@@ -96,6 +100,8 @@ export function InteriorHero({
         ) : (
           <OrganicPhotoPlaceholder
             label={photoLabel}
+            src={photoSrc}
+            alt={photoAlt}
             className={`relative z-0 ${photoOrder}`}
           />
         )}
