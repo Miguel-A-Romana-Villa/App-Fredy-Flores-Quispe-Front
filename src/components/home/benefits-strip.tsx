@@ -16,7 +16,7 @@ const benefitIcons = [
 
 export function BenefitsStrip() {
   return (
-    <section className="relative z-20 -mt-16">
+    <section className="relative z-20 -mt-10 lg:-mt-12">
       <Container>
         <div className="grid overflow-hidden rounded-panel border border-white/80 bg-white/95 p-3 shadow-elevated backdrop-blur md:grid-cols-2 lg:grid-cols-4 lg:p-5">
           {homeContent.benefits.map((benefit, index) => {
@@ -25,12 +25,12 @@ export function BenefitsStrip() {
             return (
               <article
                 key={benefit.title}
-                className={`flex gap-4 px-3 py-5 lg:px-5 ${
+                className={`card-motion flex gap-4 px-3 py-4 lg:px-4 ${
                   index ? "border-t border-border md:border-t-0 md:odd:border-l lg:border-l" : ""
                 } ${index === 2 ? "md:border-l-0 lg:border-l" : ""}`}
               >
-                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-secondary-soft text-secondary-strong">
-                  <Icon className="h-9 w-9" />
+                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-secondary-soft text-secondary-strong">
+                  <Icon className="h-8 w-8" />
                 </span>
                 <div>
                   <h2 className="font-display text-lg font-extrabold leading-6 text-primary">

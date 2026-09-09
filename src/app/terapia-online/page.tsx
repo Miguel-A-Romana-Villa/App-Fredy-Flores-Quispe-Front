@@ -54,11 +54,11 @@ export default function OnlineTherapyPage() {
             description="El proceso de coordinación es sencillo y se realiza directamente por WhatsApp."
             align="center"
           />
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
             {onlineTherapyContent.steps.map((step) => (
               <article
                 key={step.number}
-                className="rounded-card border border-border bg-surface p-6 text-center shadow-card"
+                className="card-motion rounded-card border border-border bg-surface p-5 text-center shadow-card"
               >
                 <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-secondary-soft font-display text-lg font-extrabold text-secondary-strong">
                   {step.number}
@@ -77,7 +77,7 @@ export default function OnlineTherapyPage() {
 
       <section className="bg-background py-[var(--section-space-compact)]">
         <Container className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div className="rounded-panel bg-primary p-8 text-white shadow-elevated sm:p-10">
+          <div className="card-motion rounded-panel bg-primary p-7 text-white shadow-elevated sm:p-8">
             <MonitorIcon className="h-12 w-12 text-secondary-soft" />
             <h2 className="mt-6 font-display text-heading font-extrabold">
               Sesiones mediante Google Meet

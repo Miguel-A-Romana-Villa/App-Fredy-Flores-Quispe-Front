@@ -77,6 +77,46 @@ a {
   outline-offset: 4px;
 }
 
+.card-motion {
+  animation: card-enter 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.card-motion:nth-child(2) {
+  animation-delay: 60ms;
+}
+
+.card-motion:nth-child(3) {
+  animation-delay: 120ms;
+}
+
+.card-motion:nth-child(4) {
+  animation-delay: 180ms;
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (hover: hover) {
+  .card-motion:hover {
+    transform: translateY(-0.2rem);
+    border-color: color-mix(in srgb, var(--color-brand-secondary) 45%, transparent);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -15,6 +15,8 @@ type InteriorHeroProps = {
   photoLabel?: string;
   photoSrc?: string;
   photoAlt?: string;
+  uncroppedPhoto?: boolean;
+  spaciousPhoto?: boolean;
   patternOrientation?: "vertical" | "horizontal";
   patternPosition?: PatternPosition;
   visual?: ReactNode;
@@ -37,6 +39,8 @@ export function InteriorHero({
   photoLabel,
   photoSrc,
   photoAlt,
+  uncroppedPhoto = false,
+  spaciousPhoto = false,
   patternOrientation = "vertical",
   patternPosition = "right",
   visual,
@@ -47,8 +51,8 @@ export function InteriorHero({
   const contentOrder = photoSide === "left" ? "lg:order-2" : "";
   const photoOrder = photoSide === "left" ? "lg:order-1" : "";
   const sectionSpacing = compact
-    ? "py-8 sm:py-10 lg:min-h-0 lg:py-12"
-    : "py-12 sm:py-16 lg:min-h-[35rem] lg:py-20";
+    ? "py-6 sm:py-7 lg:min-h-0 lg:py-9"
+    : "py-7 sm:py-9 lg:min-h-[29rem] lg:py-11";
   const visualHeight = compact ? "min-h-[19rem] sm:min-h-[21rem]" : "min-h-[25rem]";
   const responsiveLeftPattern =
     patternPosition === "left" && patternOrientation === "vertical";
@@ -102,6 +106,8 @@ export function InteriorHero({
             label={photoLabel}
             src={photoSrc}
             alt={photoAlt}
+            uncropped={uncroppedPhoto}
+            spacious={spaciousPhoto}
             className={`relative z-0 ${photoOrder}`}
           />
         )}

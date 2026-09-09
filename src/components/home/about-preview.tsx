@@ -10,8 +10,8 @@ export function AboutPreview() {
     <section className="relative overflow-hidden bg-background py-[var(--section-space)]">
       <LeafBranch className="absolute -bottom-14 -left-5 hidden h-[24rem] w-auto opacity-75 xl:block" />
 
-      <Container className="relative grid gap-9 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <div className="lg:pl-8">
+      <Container className="relative grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div>
           <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-secondary">
             {homeContent.about.eyebrow}
           </p>
@@ -20,7 +20,7 @@ export function AboutPreview() {
           </h2>
           <span className="mt-4 block h-0.5 w-12 rounded-full bg-secondary" />
 
-          <div className="mt-6 space-y-4">
+          <div className="mt-5 space-y-3">
             {homeContent.about.paragraphs.map((paragraph) => (
               <p
                 key={paragraph}
@@ -34,14 +34,14 @@ export function AboutPreview() {
           <ButtonLink
             href="/sobre-mi"
             variant="secondary"
-            className="mt-7"
+            className="mt-6"
             icon={<UserIcon className="h-5 w-5" />}
           >
             Conoce más sobre mi trayectoria
           </ButtonLink>
         </div>
 
-        <article className="relative overflow-hidden rounded-panel border border-white bg-white/95 p-7 shadow-elevated sm:p-10">
+        <article className="card-motion relative overflow-hidden rounded-panel border border-white bg-white/95 p-6 shadow-elevated sm:p-8">
           <BrandMark className="absolute -bottom-10 -right-6 h-60 w-60 opacity-[0.07]" />
           <div className="relative">
             <h2 className="font-display text-heading font-extrabold text-primary">
@@ -49,7 +49,7 @@ export function AboutPreview() {
             </h2>
             <span className="mt-4 block h-0.5 w-12 rounded-full bg-secondary" />
 
-            <ul className="mt-7 space-y-4">
+            <ul className="mt-6 space-y-3">
               {homeContent.experience.map((item) => (
                 <li
                   key={item}

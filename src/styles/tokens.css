@@ -43,9 +43,9 @@
 
   /* Layout y ritmo vertical. */
   --container-max: 80rem;
-  --section-space-tight: clamp(1.75rem, 3vw, 2.75rem);
-  --section-space-compact: clamp(2.5rem, 4vw, 4rem);
-  --section-space-sm: clamp(3rem, 6vw, 5rem);
-  --section-space: clamp(4.5rem, 8vw, 7rem);
+  --section-space-tight: clamp(1.25rem, 2vw, 2rem);
+  --section-space-compact: clamp(1.5rem, 2.5vw, 2.5rem);
+  --section-space-sm: clamp(2rem, 3.5vw, 3.25rem);
+  --section-space: clamp(2.5rem, 4vw, 4rem);
   --header-height: 5.5rem;
 }

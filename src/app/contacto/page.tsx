@@ -11,7 +11,7 @@ import { LottieAnimation } from "@/components/media/lottie-animation";
 import { ButtonLink } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { whatsappUrl } from "@/config/site";
+import { siteConfig, whatsappUrl } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -63,7 +63,7 @@ export default function ContactPage() {
             description="Por el momento, todas las consultas y reservas se gestionarán mediante WhatsApp."
           />
 
-          <div className="rounded-panel border border-border bg-surface p-6 shadow-elevated sm:p-7">
+          <div className="card-motion rounded-panel border border-border bg-surface p-5 shadow-elevated sm:p-6">
             <div className="flex items-center gap-4">
               <span className="grid h-14 w-14 place-items-center rounded-full bg-secondary-soft text-secondary-strong">
                 <CalendarIcon className="h-7 w-7" />
@@ -73,7 +73,7 @@ export default function ContactPage() {
                   Agenda tu sesión
                 </h2>
                 <p className="mt-1 text-text-muted">
-                  Número provisional durante la etapa de diseño
+                  WhatsApp: {siteConfig.whatsapp.displayPhone}
                 </p>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
 
       <section className="bg-background py-[var(--section-space-tight)]">
         <Container>
-          <div className="flex flex-col items-center rounded-panel border border-border bg-surface p-6 text-center shadow-card sm:p-7">
+          <div className="card-motion flex flex-col items-center rounded-panel border border-border bg-surface p-5 text-center shadow-card sm:p-6">
             <MonitorIcon className="h-12 w-12 text-secondary" />
             <h2 className="mt-4 font-display text-heading font-extrabold text-primary">
               Atención completamente online

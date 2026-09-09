@@ -13,18 +13,18 @@ import styles from "./home-hero.module.css";
 
 export function HomeHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-background pb-28 pt-10 sm:pt-14 lg:pb-36 lg:pt-16">
+    <section className="relative isolate overflow-hidden bg-background pb-20 pt-6 sm:pt-8 lg:pb-24 lg:pt-9">
       <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_75%_45%,var(--color-brand-secondary-soft),transparent_31%)] opacity-90" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-64 bg-gradient-to-t from-background-muted to-transparent" />
 
       <GeometricPattern className="absolute right-3 top-9 -z-10 hidden h-[19rem] w-auto opacity-85 xl:block" />
 
-      <Container className="grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
+      <Container className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8">
         <div className="relative z-10 max-w-2xl">
           <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-secondary">
             {homeContent.hero.eyebrow}
           </p>
-          <h1 className="mt-5 font-display text-display font-extrabold text-primary">
+          <h1 className="mt-4 font-display text-[clamp(2.35rem,7vw,5.25rem)] font-extrabold leading-[1.03] tracking-[-0.045em] text-primary">
             {homeContent.hero.title}
             <span className="block text-secondary">
               {homeContent.hero.titleAccent}
@@ -34,7 +34,7 @@ export function HomeHero() {
           <p className="mt-5 font-display text-lead font-semibold text-text-muted">
             {homeContent.hero.lead}
           </p>
-          <p className="mt-5 max-w-[34rem] text-lg leading-8 text-text">
+          <p className="mt-5 max-w-[40rem] text-base leading-7 text-text sm:text-lg sm:leading-8">
             {homeContent.hero.description}
           </p>
 
@@ -43,6 +43,7 @@ export function HomeHero() {
               href={whatsappUrl}
               external
               size="lg"
+              className="w-full sm:w-auto"
               icon={
                 <span className="grid h-7 w-7 place-items-center rounded-full bg-whatsapp text-white">
                   <WhatsAppIcon className="h-5 w-5" />
@@ -55,6 +56,7 @@ export function HomeHero() {
               href="/sobre-mi"
               variant="ghost"
               size="lg"
+              className="w-full sm:w-auto"
               icon={
                 <span className="grid h-11 w-11 place-items-center rounded-full border-2 border-secondary/40 text-primary">
                   <PlayIcon className="h-5 w-5" />
@@ -68,14 +70,14 @@ export function HomeHero() {
 
         <div className="relative mx-auto w-full max-w-[42rem] lg:mr-0">
           <div className="absolute left-[7%] top-[3%] -z-10 h-[88%] w-[88%] rounded-[44%_56%_56%_44%/55%_43%_57%_45%] bg-secondary/20" />
-          <div className="relative mx-auto aspect-square w-[min(88vw,34rem)] rounded-full bg-gradient-to-br from-primary via-primary to-[#486a9d] p-3 shadow-elevated lg:mr-[8%]">
+          <div className="relative mx-auto aspect-square w-[min(84vw,34rem)] rounded-full bg-gradient-to-br from-primary via-primary to-[#486a9d] p-2.5 shadow-elevated sm:p-3 lg:mr-[8%]">
             <div className="h-full rounded-full border-[10px] border-[#d9d8be] bg-white p-1.5">
               <PortraitPlaceholder />
             </div>
           </div>
 
           <aside
-            className={`${styles.quoteCard} rounded-panel border border-white/80 bg-white/95 px-6 pb-5 pt-7 shadow-elevated backdrop-blur`}
+            className={`${styles.quoteCard} card-motion rounded-panel border border-white/80 bg-white/95 px-6 pb-5 pt-7 shadow-elevated backdrop-blur`}
           >
             <span
               aria-hidden="true"

@@ -4,7 +4,7 @@ export function PortraitPlaceholder() {
   return (
     <div className="relative h-full w-full overflow-hidden rounded-full bg-secondary-soft">
       <Image
-        src="/images/foto-home.jpeg"
+        src="/images/foto-home.png"
         alt="Fred Flores en su consultorio"
         fill
         priority
